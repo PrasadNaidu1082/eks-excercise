@@ -1,20 +1,35 @@
 variable "region" {
+  description = "The aws region"
   type        = string
-  description = "region to be hosted on"
 }
 
-variable "instance_type" {
-  type        = string
-  description = "the instance type to use"
+variable "availability_zones_count" {
+  description = "The number of AZs."
+  type        = number
 }
 
-variable "ami" {
-  type        = string
-  description = "the ami id to be used"
+variable "project" {
+  description = "Name of the project deployment"
+  type = string
 }
 
-variable "vpc_id" {
+variable "vpc_cidr" {
+  description = "The CIDR block for the VPC"
   type        = string
-  description = "vpc used"
 }
 
+variable "subnet_cidr_bits" {
+  description = "The number of subnet bits for the CIDR."
+  type        = number
+}
+
+variable "tags" {
+  description = "A map of tags to add to all resources"
+  type        = map(string)
+  default = {
+    "Project"     = "Eks_Crealytics_project"
+    "Environment" = "Production"
+    "Owner"       = "Prasad Naidu"
+    "Name"        = "Eks_clusternode1"
+  }
+}

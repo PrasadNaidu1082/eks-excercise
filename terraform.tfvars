@@ -1,5 +1,5 @@
-region = "ap-south-1"
-ami    = "ami-06489866022e12a14"
-instance_type = "t2.micro"
-vpc_id = "vpc-0af966b20ff695c4b"
-
+region  = "ap-south-1"
+availability_zones_count = 2
+project = "Eks_Crealytics"
+vpc_cidr         = "10.0.0.0/16"
+subnet_cidr_bits = 8

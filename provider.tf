@@ -1,5 +1,4 @@
 provider "aws" {
-   region     = var.region
-   profile    = "default"
-   shared_credentials_files = ["/root/.aws/credentials"]
+  region = var.region
+  shared_credentials_files = ["/root/.aws/credentials"]
 }
